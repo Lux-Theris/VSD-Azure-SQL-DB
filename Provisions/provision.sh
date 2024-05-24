@@ -32,8 +32,8 @@ az webapp create \
 
 # Provision Azure SQL Database
 SQL_SERVER_NAME=$RESOURCE_GROUP_NAME"-sql-server"
-SQL_SERVER_ADMIN_USER="AdminUser"
-SQL_SERVER_ADMIN_PASSWORD="Mudar@123"
+SQL_SERVER_ADMIN_USER=""
+SQL_SERVER_ADMIN_PASSWORD=""
 SQL_DATABASE_NAME=$RESOURCE_GROUP_NAME"-sql-db"
 az sql server create \
     --name $SQL_SERVER_NAME \
