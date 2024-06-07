@@ -1,8 +1,22 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Página Inicial";
 }
+@model IEnumerable<ToDo>
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <hr />
+    <form>
+        <label for="todo">Tarefa</label>
+        <input type="text" name="todo" id="todo" />
+        <button type="submit">Enviar</button>
+    </form>
+    <hr />
+    <h2>Lista de Tarefas</h2>
+    <ul>
+        @foreach(var todo in Model){
+        <li>@todo.Description</li>
+        }
+    </ul>
 </div>
